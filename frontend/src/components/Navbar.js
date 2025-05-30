@@ -7,10 +7,9 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo/Home Link */}
           <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 bg-emerald-800 flex items-center justify-center rounded">
-              {/* Placeholder for logo */}
-              <span className="text-emerald-100">Logo</span>
-            </div>
+            <span className="text-emerald-100 text-xl font-semibold hover:text-emerald-200 transition-colors duration-200">
+              Srinesh Selvaraj
+            </span>
           </Link>
 
           {/* Navigation Links */}
