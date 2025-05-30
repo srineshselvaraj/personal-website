@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Experience from './components/Experience';
+import Projects from './components/Projects';
 import './App.css';
 import './index.css';
 
@@ -15,11 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={
-              <div className="flex items-center justify-center h-[calc(100vh-128px)]">
-                <h1 className="text-3xl font-bold text-gray-700">Projects Page</h1>
-              </div>
-            } />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </main>
         <Footer />
