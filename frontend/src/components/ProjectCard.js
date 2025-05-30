@@ -16,15 +16,15 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
   };
 
   return (
-    <div className="w-full bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300">
+    <div className="w-full bg-emerald-900 rounded-lg shadow-lg overflow-hidden transition-all duration-300 shadow-emerald-900/50">
       {/* Header - Always visible */}
       <div
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center justify-between p-4 cursor-pointer hover:bg-gray-50"
+        className="flex items-center justify-between p-4 cursor-pointer hover:bg-emerald-800"
       >
-        <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
+        <h3 className="text-xl font-semibold text-emerald-100">{name}</h3>
         <FaChevronDown
-          className={`text-gray-500 transition-transform duration-300 ${
+          className={`text-emerald-300 transition-transform duration-300 ${
             isExpanded ? 'transform rotate-180' : ''
           }`}
         />
@@ -37,13 +37,13 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
         } overflow-hidden`}
       >
         {/* Project Description and GitHub Link */}
-        <div className="px-4 py-3 border-t border-gray-100">
-          <p className="text-gray-600 mb-3">{description}</p>
+        <div className="px-4 py-3 border-t border-emerald-800">
+          <p className="text-emerald-100 mb-3">{description}</p>
           
           {/* Tech Stack */}
           {technologies && technologies.length > 0 && (
             <div className="mb-4">
-              <h4 className="text-sm font-semibold text-gray-700 mb-2">Technologies Used:</h4>
+              <h4 className="text-sm font-semibold text-emerald-200 mb-2">Technologies Used:</h4>
               <TechStack technologies={technologies} />
             </div>
           )}
@@ -52,7 +52,7 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+            className="inline-flex items-center text-emerald-300 hover:text-emerald-200 transition-colors"
           >
             <FaGithub className="mr-2" />
             View on GitHub
@@ -61,8 +61,8 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
 
         {/* Image Carousel */}
         {images.length > 0 && (
-          <div className="relative p-4 border-t border-gray-100">
-            <div className="relative h-96 overflow-hidden rounded-lg bg-gray-100">
+          <div className="relative p-4 border-t border-emerald-800">
+            <div className="relative h-96 overflow-hidden rounded-lg bg-emerald-950">
               {/* Images Container */}
               <div className="absolute w-full h-full">
                 {images.map((image, index) => (
@@ -89,18 +89,18 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
                       e.stopPropagation();
                       previousImage();
                     }}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors z-20"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-emerald-800/80 hover:bg-emerald-800 p-2 rounded-full shadow-md transition-colors z-20"
                   >
-                    <BsChevronLeft className="text-gray-800" />
+                    <BsChevronLeft className="text-emerald-100" />
                   </button>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       nextImage();
                     }}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors z-20"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-emerald-800/80 hover:bg-emerald-800 p-2 rounded-full shadow-md transition-colors z-20"
                   >
-                    <BsChevronRight className="text-gray-800" />
+                    <BsChevronRight className="text-emerald-100" />
                   </button>
                 </>
               )}
@@ -117,8 +117,8 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
                       }}
                       className={`w-2 h-2 rounded-full transition-colors ${
                         currentImageIndex === index
-                          ? 'bg-blue-600'
-                          : 'bg-gray-300 hover:bg-gray-400'
+                          ? 'bg-emerald-400'
+                          : 'bg-emerald-700 hover:bg-emerald-600'
                       }`}
                     />
                   ))}

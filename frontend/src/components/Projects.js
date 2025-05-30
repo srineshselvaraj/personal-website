@@ -59,7 +59,7 @@ function Projects() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">My Projects</h2>
+      <h2 className="text-3xl font-bold text-emerald-100 mb-8 text-center">My Projects</h2>
       
       <div className="max-w-4xl mx-auto space-y-6">
         {projects.map((project, index) => (
