@@ -33,7 +33,7 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
       {/* Expandable Content */}
       <div
         className={`transition-all duration-300 ease-in-out ${
-          isExpanded ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+          isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}
       >
         {/* Project Description and GitHub Link */}
@@ -62,19 +62,15 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
         {/* Image Carousel */}
         {images.length > 0 && (
           <div className="relative p-4 border-t border-gray-100">
-            <div className="relative h-64 overflow-hidden rounded-lg">
-              {/* Images */}
-              <div
-                className="flex transition-transform duration-300 ease-in-out h-full"
-                style={{
-                  transform: `translateX(-${currentImageIndex * 100}%)`,
-                  width: `${images.length * 100}%`,
-                }}
-              >
+            <div className="relative h-96 overflow-hidden rounded-lg bg-gray-100">
+              {/* Images Container */}
+              <div className="absolute w-full h-full">
                 {images.map((image, index) => (
                   <div
                     key={index}
-                    className="w-full h-full flex-shrink-0 flex items-center justify-center bg-gray-100"
+                    className={`absolute top-0 left-0 w-full h-full transition-opacity duration-300 flex items-center justify-center ${
+                      index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                    }`}
                   >
                     <img
                       src={image}
@@ -93,7 +89,7 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
                       e.stopPropagation();
                       previousImage();
                     }}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors"
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors z-20"
                   >
                     <BsChevronLeft className="text-gray-800" />
                   </button>
@@ -102,7 +98,7 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
                       e.stopPropagation();
                       nextImage();
                     }}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-colors z-20"
                   >
                     <BsChevronRight className="text-gray-800" />
                   </button>
@@ -111,7 +107,7 @@ function ProjectCard({ name, description, githubUrl, images, technologies }) {
 
               {/* Image Indicators */}
               {images.length > 1 && (
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
                   {images.map((_, index) => (
                     <button
                       key={index}

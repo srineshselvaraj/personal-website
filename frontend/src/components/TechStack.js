@@ -1,42 +1,53 @@
 import {
-  FaReact, FaNodeJs, FaPython, FaJava, FaDocker, FaAws,
-  FaHtml5, FaCss3Alt, FaJs, FaGit, FaNpm
+  FaReact, FaPython, FaHtml5, FaCss3Alt, FaJs, FaPhp
 } from 'react-icons/fa';
 import {
-  SiTypescript, SiMongodb, SiPostgresql, SiRedis, SiTailwindcss,
-  SiExpress, SiDjango, SiSpring, SiKubernetes, SiFirebase
+  SiPostgresql, SiFlask, SiMysql, SiCplusplus,
+  SiPandas, SiNumpy, SiBootstrap, SiStreamlit
 } from 'react-icons/si';
+
+// Custom icons for technologies not available in react-icons
+const customIcons = {
+  "scikit-learn": "/tech-icons/scikit-learn.svg",
+  matplotlib: "/tech-icons/matplotlib.svg",
+  dash: "/tech-icons/dash.svg"
+};
 
 // Map of technology names to their respective react-icons components
 const techIconMap = {
+  // Frontend
   react: FaReact,
-  node: FaNodeJs,
-  python: FaPython,
-  java: FaJava,
-  docker: FaDocker,
-  aws: FaAws,
-  html5: FaHtml5,
-  css3: FaCss3Alt,
+  html: FaHtml5,
+  css: FaCss3Alt,
   javascript: FaJs,
-  git: FaGit,
-  npm: FaNpm,
-  typescript: SiTypescript,
-  mongodb: SiMongodb,
+  bootstrap: SiBootstrap,
+
+  // Backend
+  python: FaPython,
+  php: FaPhp,
+  flask: SiFlask,
+  
+  // Databases
   postgresql: SiPostgresql,
-  redis: SiRedis,
-  tailwindcss: SiTailwindcss,
-  express: SiExpress,
-  django: SiDjango,
-  spring: SiSpring,
-  kubernetes: SiKubernetes,
-  firebase: SiFirebase
+  mysql: SiMysql,
+
+  // Data Science & ML
+  pandas: SiPandas,
+  numpy: SiNumpy,
+  streamlit: SiStreamlit,
+
+  // Programming Languages
+  "c++": SiCplusplus
 };
 
 function TechStack({ technologies }) {
   return (
     <div className="flex flex-wrap gap-3">
       {technologies.map((tech, index) => {
-        const Icon = tech.icon || techIconMap[tech.name.toLowerCase()];
+        // Convert to lowercase and remove spaces for matching
+        const normalizedName = tech.name.toLowerCase().replace(/\s+/g, '');
+        const Icon = tech.icon || techIconMap[normalizedName];
+        const customIcon = customIcons[normalizedName];
         
         return (
           <div
@@ -45,9 +56,9 @@ function TechStack({ technologies }) {
           >
             {Icon ? (
               <Icon className="w-4 h-4 mr-1.5 text-gray-700" />
-            ) : tech.customIcon ? (
+            ) : customIcon ? (
               <img
-                src={tech.customIcon}
+                src={customIcon}
                 alt={`${tech.name} icon`}
                 className="w-4 h-4 mr-1.5"
               />

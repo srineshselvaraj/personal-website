@@ -1,69 +1,58 @@
 import ProjectCard from './ProjectCard';
 
 function Projects() {
-  // Example projects - replace with your actual projects
   const projects = [
     {
-      name: "Personal Portfolio Website",
-      description: "A responsive personal portfolio website built with React and Tailwind CSS. Features include a dynamic timeline for work experience, expandable project cards with image carousels, and contact information.",
-      githubUrl: "https://github.com/yourusername/personal-website",
-      images: ["/project1-1.jpg", "/project1-2.jpg", "/project1-3.jpg"],
+      name: "COGnition",
+      description: "An LLM-powered learning tool that allows users to quickly generate summaries, questions, and flashcards based on any given text, with OCR capabilities and a login system. I built this project in 24 hours with a team of 3 for HackNJIT 2024.",
+      githubUrl: "https://github.com/srineshselvaraj/hacknjit-2024",
+      images: ["/cognition1.jpg", "/cognition2.jpg", "/cognition3.jpg", "/cognition4.jpg"],
       technologies: [
         { name: "React" },
-        { name: "TailwindCSS" },
-        { name: "JavaScript" }
+        { name: "Bootstrap" },
+        { name: "Flask" },
+        { name: "PostgreSQL" }
       ]
     },
     {
-      name: "E-commerce Platform",
-      description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Includes features like user authentication, product catalog, shopping cart, and payment integration.",
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      images: ["/project2-1.jpg", "/project2-2.jpg"],
-      technologies: [
-        { name: "React" },
-        { name: "Node" },
-        { name: "MongoDB" },
-        { name: "Express" },
-        { name: "TypeScript" }
-      ]
-    },
-    {
-      name: "Task Management App",
-      description: "A collaborative task management application with real-time updates using Socket.IO. Features include task creation, assignment, status tracking, and team collaboration tools.",
-      githubUrl: "https://github.com/yourusername/task-manager",
-      images: ["/project3-1.jpg", "/project3-2.jpg", "/project3-3.jpg", "/project3-4.jpg"],
-      technologies: [
-        { name: "React" },
-        { name: "Node" },
-        { name: "PostgreSQL" },
-        // Example of using a custom icon
-        { 
-          name: "Socket.IO",
-          customIcon: "/tech-icons/socketio.svg" // You'll need to add this icon
-        }
-      ]
-    },
-    {
-      name: "Weather Dashboard",
-      description: "A weather dashboard that displays current weather conditions and forecasts for multiple cities. Built with React and integrates with the OpenWeather API.",
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
-      images: ["/project4-1.jpg"],
-      technologies: [
-        { name: "React" },
-        { name: "TypeScript" },
-        { name: "TailwindCSS" }
-      ]
-    },
-    {
-      name: "Social Media Analytics Tool",
-      description: "A tool for analyzing social media engagement and generating insights. Features include data visualization, trend analysis, and automated reporting.",
-      githubUrl: "https://github.com/yourusername/social-analytics",
-      images: ["/project5-1.jpg", "/project5-2.jpg", "/project5-3.jpg"],
+      name: "Dataset Dashboard",
+      description: "An interactive dashboard that lets users upload any dataset, select any target variable, generate bar charts for categorical features and correlation, and train a regression model with any combination of features. I built this project with a group of 3 as part of class project.",
+      githubUrl: "https://github.com/parkab/NJIT-CS301-Milestone4-Group9",
+      images: ["/dashboard1.png"],
       technologies: [
         { name: "Python" },
-        { name: "Django" },
-        { name: "PostgreSQL" },
-        { name: "Redis" }
+        { name: "Dash" },
+        { name: "scikit-learn" },
+        { name: "pandas" },
+        {name: "HTML"},
+        {name: "CSS"}
+      ]
+    },
+    {
+      name: "Tech Accessories Store",
+      description: "A website for a fictional tech accessories store with a login system and product catalog. Consumers can browse products, and admins can manage the catalog and generate shipping labels. I built this project as part of a class project.",
+      githubUrl: "https://github.com/srineshselvaraj/tech-accessories-store",
+      images: ["/tas1.png", "/tas2.png", "/tas3.png", "/tas4.png", "/tas5.png"],
+      technologies: [
+        { name: "HTML" },
+        { name: "CSS" },
+        { name: "JavaScript" },
+        { name: "PHP" },
+        { name: "MySQL" }
+      ]
+    },
+    {
+      name: "Maritime Mortality",
+      description: "A data analysis tool that can visualize and predict shipwreck survival rates based on year, age, and gender. I built this project in 24 hours for HackNJIT 2023.",
+      githubUrl: "https://github.com/srineshselvaraj/maritime-mortality",
+      images: ["/mm1.png", "/mm2.png", "/mm3.png", "/mm4.png"],
+      technologies: [
+        { name: "Python" },
+        { name: "NumPy" },
+        { name: "Pandas" },
+        { name: "Matplotlib" },
+        { name: "Scikit-learn" },
+        { name: "Streamlit" }
       ]
     }
   ];
