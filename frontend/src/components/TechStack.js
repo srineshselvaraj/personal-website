@@ -6,13 +6,6 @@ import {
   SiPandas, SiNumpy, SiBootstrap, SiStreamlit
 } from 'react-icons/si';
 
-// Custom icons for technologies not available in react-icons
-const customIcons = {
-  "scikit-learn": "/tech-icons/scikit-learn.svg",
-  matplotlib: "/tech-icons/matplotlib.svg",
-  dash: "/tech-icons/dash.svg"
-};
-
 // Map of technology names to their respective react-icons components
 const techIconMap = {
   // Frontend
@@ -47,23 +40,14 @@ function TechStack({ technologies }) {
         // Convert to lowercase and remove spaces for matching
         const normalizedName = tech.name.toLowerCase().replace(/\s+/g, '');
         const Icon = tech.icon || techIconMap[normalizedName];
-        const customIcon = customIcons[normalizedName];
         
         return (
           <div
             key={index}
-            className="flex items-center bg-gray-100 rounded-full px-3 py-1 text-sm"
+            className="flex items-center bg-emerald-800 rounded-full px-3 py-1 text-sm"
           >
-            {Icon ? (
-              <Icon className="w-4 h-4 mr-1.5 text-gray-700" />
-            ) : customIcon ? (
-              <img
-                src={customIcon}
-                alt={`${tech.name} icon`}
-                className="w-4 h-4 mr-1.5"
-              />
-            ) : null}
-            <span className="text-gray-700">{tech.name}</span>
+            {Icon && <Icon className="w-4 h-4 mr-1.5 text-emerald-300" />}
+            <span className="text-emerald-100">{tech.name}</span>
           </div>
         );
       })}
