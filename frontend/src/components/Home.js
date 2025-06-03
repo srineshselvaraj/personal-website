@@ -4,7 +4,6 @@ function Home() {
       <div className="flex flex-col items-center max-w-2xl mx-auto text-center space-y-8">
         {/* Profile Picture */}
         <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-emerald-700 shadow-lg">
-          {/* Replace the img src with your actual image path */}
           <img
             src="/profile2.jpg"
             alt="Profile"

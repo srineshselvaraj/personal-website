@@ -3,20 +3,8 @@ import ProjectCard from './ProjectCard';
 function Projects() {
   const projects = [
     {
-      name: "COGnition",
-      description: "An LLM-powered learning tool that allows users to quickly generate summaries, questions, and flashcards based on any given text, with OCR capabilities and a login system. I built this project in 24 hours with a team of 3 for HackNJIT 2024.",
-      githubUrl: "https://github.com/srineshselvaraj/hacknjit-2024",
-      images: ["/cognition1.jpg", "/cognition2.jpg", "/cognition3.jpg", "/cognition4.jpg"],
-      technologies: [
-        { name: "React" },
-        { name: "Bootstrap" },
-        { name: "Flask" },
-        { name: "PostgreSQL" }
-      ]
-    },
-    {
       name: "Dataset Dashboard",
-      description: "An interactive dashboard that lets users upload any dataset, select any target variable, generate bar charts for categorical features and correlation, and train a regression model with any combination of features. I built this project with a group of 3 as part of class project.",
+      description: "An interactive dashboard that lets users upload any dataset, select any target variable, generate bar charts for categorical features and correlation, and train a regression model with any combination of features. I built this project with a group of 3 as part of a class project.",
       githubUrl: "https://github.com/parkab/NJIT-CS301-Milestone4-Group9",
       images: ["/dashboard1.png"],
       technologies: [
@@ -26,6 +14,18 @@ function Projects() {
         { name: "pandas" },
         {name: "HTML"},
         {name: "CSS"}
+      ]
+    },
+    {
+      name: "COGnition",
+      description: "An LLM-powered learning tool that allows users to quickly generate summaries, questions, and flashcards based on any given text, with OCR capabilities and a login system. I built this project in 24 hours with a team of 3 for HackNJIT 2024.",
+      githubUrl: "https://github.com/srineshselvaraj/hacknjit-2024",
+      images: ["/cognition1.jpg", "/cognition2.jpg", "/cognition3.jpg", "/cognition4.jpg"],
+      technologies: [
+        { name: "React" },
+        { name: "Bootstrap" },
+        { name: "Flask" },
+        { name: "PostgreSQL" }
       ]
     },
     {

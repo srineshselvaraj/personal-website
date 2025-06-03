@@ -5,7 +5,7 @@ function Experience() {
   const experiences = [
     {
       position: "Information Technology Intern",
-      dateRange: "Jun 2025 - Aug 2025",
+      dateRange: "Jun 2025 - Present",
       company: "Voya Financial",
       description: "I will be working on the Solutions Architecture team.",
       logoUrl: "/voya.png"
