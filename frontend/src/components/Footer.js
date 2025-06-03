@@ -22,7 +22,7 @@ function Footer() {
             <FaGithub className="w-6 h-6" />
           </a>
           <a
-            href="mailto:srinesh9@gmail.com"
+            href="mailto:srineshselvaraj@gmail.com"
             className="text-emerald-200 hover:text-emerald-100 transition-colors"
           >
             <FaEnvelope className="w-6 h-6" />
