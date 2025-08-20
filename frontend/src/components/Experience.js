@@ -4,10 +4,10 @@ import ExperienceItem from './ExperienceItem';
 function Experience() {
   const experiences = [
     {
-      position: "Information Technology Intern",
-      dateRange: "Jun 2025 - Present",
+      position: "Technology Architect Intern",
+      dateRange: "Jun 2025 - Aug 2025",
       company: "Voya Financial",
-      description: "I will be working on the Solutions Architecture team.",
+      description: "I automated a manual process using Power Automate to efficiently handle approvals. I partnered with chief architects and wrote documentation so the automation could remain in use.",
       logoUrl: "/voya.png"
     },
     {
